@@ -10,19 +10,179 @@
     </head>
     <body>
         <header class="header">
+            <h1 class="visually-hidden">Тёплый пол - В каждый дом</h1>
             <div class="container header__container">
                 <img
                     class="header__logo"
                     src="images/logo.svg"
                     alt="Логотип: Тёплый пол"
                 />
-                <button class="header__button">заказать</button>
+                <button class="button header__button">Заказать</button>
             </div>
         </header>
 
-        <main class="main"></main>
+        <main class="main">
+            <section class="section-offset hero">
+                <div class="container container--hero">
+                    <div class="hero__content gray-block">
+                        <h2 class="title hero__title">
+                            Приносим тепло в&nbsp;каждый дом
+                        </h2>
+                        <p class="hero__description">
+                            Устанавливаем теплые полы в&nbsp;квартирах, офисах
+                            и&nbsp;загородных домах.
+                        </p>
+                        <a href="#calc" class="button link hero__link">
+                            Рассчитать&nbsp;стоимость
+                        </a>
+                    </div>
+                    <div class="hero__slider-wrapper">
+                        <div class="filling">
+                            <div class="filling">
+                                <div
+                                    class="hero__image filling"
+                                    style="
+                                        background-image: url('./images/slider/slide-1.jpg');
+                                    "
+                                ></div>
+                            </div>
 
-        <footer class="footer">
+                            <button
+                                class="hero__slider-btn hero__slider-btn--prev"
+                            >
+                                <!-- &lt; -->
+                            </button>
+                            <button
+                                class="hero__slider-btn hero__slider-btn--next"
+                            >
+                                <!-- &gt; -->
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section-offset advantages">
+                <div class="container container--advantages">
+                    <h2 class="title advantages__title">Наши преимущества</h2>
+                    <ul class="advantages__list list-reset">
+                        <li class="advantages__item">Надежные материалы</li>
+                        <li class="advantages__item">опытные монтажники</li>
+                        <li class="advantages__item">
+                            Регулируемая температура пола
+                        </li>
+                        <li class="advantages__item">Защита от замыканий</li>
+                        <li class="advantages__item">Гарантия до 10 лет</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="section-offset calc" id="calc">
+                <div class="container calc__container">
+                    <div class="calc__content gray-block">
+                        <h2 class="title calc__title">Рассчитайте стоимость</h2>
+                        <form class="calc__form">
+                            <fieldset
+                                class="calc__fieldset calc__fieldset_size"
+                            >
+                                <label
+                                    class="calc__wrapper-input calc__wrapper-input_size"
+                                >
+                                    <span class="calc__text"
+                                        >Ширина помещения, м</span
+                                    >
+                                    <input
+                                        type="number"
+                                        class="calc__input-number"
+                                        name="width"
+                                        required
+                                    />
+                                </label>
+                                <label
+                                    class="calc__wrapper-input calc__wrapper-input_size"
+                                >
+                                    <span class="calc__text"
+                                        >Длина помещения, м</span
+                                    >
+                                    <input
+                                        type="number"
+                                        class="calc__input-number"
+                                        name="length"
+                                        required
+                                    />
+                                </label>
+                            </fieldset>
+                            <fieldset
+                                class="calc__fieldset calc__fieldset_tariff"
+                            >
+                                <legend class="calc__text calc__text_legend">
+                                    Тариф
+                                </legend>
+                                <label
+                                    class="calc__wrapper-input calc__wrapper-input_tariff"
+                                >
+                                    <input
+                                        class="calc__input-radio"
+                                        type="radio"
+                                        name="tariff"
+                                        value="economy"
+                                    />
+                                    <span class="calc__label-radio">
+                                        Эконом
+                                    </span>
+                                </label>
+                                <label
+                                    class="calc__wrapper-input calc__wrapper-input_tariff"
+                                >
+                                    <input
+                                        class="calc__input-radio"
+                                        type="radio"
+                                        name="tariff"
+                                        value="comfort"
+                                        checked
+                                    />
+                                    <span class="calc__label-radio">
+                                        Комфорт
+                                    </span>
+                                </label>
+                                <label
+                                    class="calc__wrapper-input calc__wrapper-input_tariff"
+                                >
+                                    <input
+                                        class="calc__input-radio"
+                                        type="radio"
+                                        name="tariff"
+                                        value="premium"
+                                    />
+                                    <span class="calc__label-radio">
+                                        Премиум
+                                    </span>
+                                </label>
+                            </fieldset>
+                            <button class="button calc__submit" type="submit">
+                                Рассчитать
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="calc__total">
+                        <div class="calc__result-wrapper">
+                            <p class="calc__result">
+                                <span class="calc__text">Площадь</span>
+                                <span class="calc__result-text">35 кв м</span>
+                            </p>
+
+                            <p class="calc__result">
+                                <span class="calc__text"
+                                    >Примерная стоимость</span
+                                >
+                                <span class="calc__result-text">42590 руб</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="section-offset footer">
             <div class="container footer__container">
                 <img
                     src="images/logo.svg"
@@ -32,7 +192,7 @@
 
                 <ul class="footer__list footer__social list-reset">
                     <li class="footer__item">
-                        <a class="footer__link" href="#">
+                        <a class="link footer__link" href="#">
                             <svg
                                 width="25"
                                 height="24"
@@ -48,7 +208,7 @@
                         </a>
                     </li>
                     <li class="footer__item">
-                        <a class="footer__link" href="#">
+                        <a class="link footer__link" href="#">
                             <svg
                                 width="24"
                                 height="24"
@@ -69,7 +229,7 @@
                     <li class="footer__item">
                         <a
                             href="tel:+78588497380"
-                            class="footer__link footer__link_contact"
+                            class="link footer__link footer__link_contact"
                         >
                             <svg
                                 width="24"
@@ -91,7 +251,7 @@
                     <li class="footer__item">
                         <a
                             href="mailto:Teplyipol@gmail.com"
-                            class="footer__link footer__link_contact"
+                            class="link footer__link footer__link_contact"
                         >
                             <svg
                                 width="24"
@@ -133,7 +293,7 @@
                         Designer:
                         <a
                             href="https://t.me/Mrshmallowww"
-                            class="footer__link"
+                            class="link footer__link"
                             target="_blank"
                             >Anastasia Ilina</a
                         >
@@ -142,7 +302,7 @@
                         Developer:
                         <a
                             href="https://t.me/slawaslawaslawa"
-                            class="footer__link"
+                            class="link footer__link"
                             target="_blank"
                             >Slawa</a
                         >
