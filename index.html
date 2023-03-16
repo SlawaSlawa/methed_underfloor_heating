@@ -5,17 +5,28 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Тёплый пол - Приносим тепло в каждый дом</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+        />
         <link rel="stylesheet" href="libs/normalize.css" />
         <link rel="stylesheet" href="css/index.css" />
+        <script
+            src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
+            defer
+        ></script>
+        <script src="js/script.js" defer></script>
     </head>
     <body>
         <header class="header">
             <h1 class="visually-hidden">Тёплый пол - В каждый дом</h1>
             <div class="container header__container">
                 <img
-                    class="header__logo"
+                    class="header__logo image"
                     src="images/logo.svg"
                     alt="Логотип: Тёплый пол"
+                    width="162"
+                    height="39"
                 />
                 <button class="button header__button">Заказать</button>
             </div>
@@ -36,27 +47,68 @@
                             Рассчитать&nbsp;стоимость
                         </a>
                     </div>
-                    <div class="hero__slider-wrapper">
-                        <div class="filling">
-                            <div class="filling">
-                                <div
-                                    class="hero__image filling"
-                                    style="
-                                        background-image: url('./images/slider/slide-1.jpg');
-                                    "
-                                ></div>
-                            </div>
+                    <div class="hero__slider-block">
+                        <div class="swiper hero__slider">
+                            <div class="swiper-wrapper hero__slider-wrapper">
+                                <div class="swiper-slide">
+                                    <div
+                                        class="hero__image"
+                                        style="
+                                            background-image: url('./images/slider/slide-1.jpg');
+                                        "
+                                    ></div>
+                                </div>
+                                <!-- /swiper-slide -->
 
-                            <button
-                                class="hero__slider-btn hero__slider-btn--prev"
-                            >
-                                <!-- &lt; -->
-                            </button>
-                            <button
-                                class="hero__slider-btn hero__slider-btn--next"
-                            >
-                                <!-- &gt; -->
-                            </button>
+                                <div class="swiper-slide">
+                                    <div
+                                        class="hero__image"
+                                        style="
+                                            background-image: url('./images/slider/slide-2.jpg');
+                                        "
+                                    ></div>
+                                    <!-- /swiper-slide -->
+                                </div>
+                                <!-- /swiper-slide -->
+
+                                <div class="swiper-slide">
+                                    <div
+                                        class="hero__image"
+                                        style="
+                                            background-image: url('./images/slider/slide-3.jpg');
+                                        "
+                                    ></div>
+                                </div>
+                                <!-- /swiper-slide -->
+
+                                <div class="swiper-slide">
+                                    <div
+                                        class="hero__image"
+                                        style="
+                                            background-image: url('./images/slider/slide-4.jpg');
+                                        "
+                                    ></div>
+                                </div>
+                                <!-- /swiper-slide -->
+
+                                <div class="swiper-slide">
+                                    <div
+                                        class="hero__image"
+                                        style="
+                                            background-image: url('./images/slider/slide-5.jpg');
+                                        "
+                                    ></div>
+                                </div>
+                                <!-- /swiper-slide -->
+                            </div>
+                            <div class="hero__arrow">
+                                <button
+                                    class="hero__slider-btn hero__slider-btn--prev"
+                                ></button>
+                                <button
+                                    class="hero__slider-btn hero__slider-btn--next"
+                                ></button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -187,7 +239,9 @@
                 <img
                     src="images/logo.svg"
                     alt="Логотип: Тёплый пол"
-                    class="footer__logo"
+                    class="footer__logo image"
+                    width="162"
+                    height="39"
                 />
 
                 <ul class="footer__list footer__social list-reset">

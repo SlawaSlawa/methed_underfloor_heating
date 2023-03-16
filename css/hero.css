@@ -1,5 +1,7 @@
 .hero {
     padding-top: 0;
+
+    overflow: hidden;
 }
 
 .hero__title {
@@ -7,15 +9,23 @@
 }
 
 .container--hero {
+    position: relative;
     display: flex;
-    gap: 10px;
+    gap: var(--gap);
 }
 
 .hero__content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    flex-basis: 50%;
+    width: var(--width-block);
+}
+
+.hero__slider-block {
+    position: absolute;
+    left: calc(var(--width-block) + var(--gap) / 2);
+    width: calc(((var(--width-block) + var(--gap)) * 2) - var(--gap));
+    height: 100%;
 }
 
 .hero__description {
@@ -27,11 +37,11 @@
     text-transform: uppercase;
 }
 
-.hero__slider-wrapper {
-    flex-basis: 50%;
-}
-
 .hero__image {
+    width: var(--width-slide);
+    max-width: 100%;
+    height: 100%;
+
     border-radius: 12px;
     
     background-position: center;
@@ -39,11 +49,69 @@
     background-repeat: no-repeat;
 }
 
-.hero__slider-btn {
+.hero__slider {
+    position: relative;
+    height: 100%;
 }
 
-.hero__slider-btn--prev {
+.hero__arrow {
+    position: absolute;
+    bottom: var(--padding);
+    left: calc(var(--width-slide) - var(--padding));
+    transform: translateX(-100%);
+    display: flex;
+    gap: 8px;
+    z-index: 3;
+}
+
+.hero__slider-btn {
+    display: block;
+    width: 42px;
+    height: 42px;
+    padding: 0;
+
+    background: #FFC700 url("../images/arrow.svg") no-repeat center/12px;
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
 }
 
 .hero__slider-btn--next {
+    transform: rotate(180deg);
+}
+
+/* MEDIA */
+
+
+@media (max-width: 1240px) {
+    .hero__title {
+        margin-bottom: 24px;
+    }
+    .hero__description {
+        margin-bottom: 98px;
+    }
+}
+
+@media (max-width: 920px) {
+    .container--hero {
+        flex-direction: column;
+    }
+    .hero__content {
+        width: 100%;
+    }
+    .hero__slider-block {
+        position: static;
+        height: 280px;
+    }
+    .hero__title {
+        margin-bottom: 16px;
+    }
+    .hero__description {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 560px) {
+
 }

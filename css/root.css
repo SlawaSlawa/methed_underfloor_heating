@@ -1,0 +1,6 @@
+:root {
+    --width-slide: 590px;
+    --width-block: calc(50% - 10px);
+    --gap: 10px;
+    --padding: 50px;
+}
