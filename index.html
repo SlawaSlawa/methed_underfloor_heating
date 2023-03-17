@@ -6,15 +6,46 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Тёплый пол - Приносим тепло в каждый дом</title>
         <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+            rel="apple-touch-icon"
+            sizes="120x120"
+            href="images/favicon_package/apple-touch-icon.png"
         />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="images/favicon_package/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="images/favicon_package/favicon-16x16.png"
+        />
+        <link rel="manifest" href="images/favicon_package/site.webmanifest" />
+        <link
+            rel="mask-icon"
+            href="images/favicon_package/safari-pinned-tab.svg"
+            color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
+        <link
+            rel="preload"
+            href="fonts/inter-v12-cyrillic_latin-500.woff2"
+            as="font"
+            crossorigin
+        />
+        <link
+            rel="preload"
+            href="fonts/inter-v12-cyrillic_latin-regular.woff2"
+            as="font"
+            crossorigin
+        />
+        <link rel="stylesheet" href="libs/swiper/swiper-bundle.min.css" />
         <link rel="stylesheet" href="libs/normalize.css" />
         <link rel="stylesheet" href="css/index.css" />
-        <script
-            src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"
-            defer
-        ></script>
+        <script src="libs/swiper/swiper-bundle.min.js" defer></script>
         <script src="js/script.js" defer></script>
     </head>
     <body>
@@ -114,24 +145,30 @@
                 </div>
             </section>
             <section class="section-offset advantages">
-                <div class="container container--advantages">
-                    <h2 class="title advantages__title">Наши преимущества</h2>
-                    <ul class="advantages__list list-reset">
-                        <li class="advantages__item">Надежные материалы</li>
-                        <li class="advantages__item">опытные монтажники</li>
-                        <li class="advantages__item">
-                            Регулируемая температура пола
-                        </li>
-                        <li class="advantages__item">Защита от замыканий</li>
-                        <li class="advantages__item">Гарантия до 10 лет</li>
-                    </ul>
+                <div class="container">
+                    <div class="container--advantages">
+                        <h2 class="title advantages__title">
+                            Наши преимущества
+                        </h2>
+                        <ul class="advantages__list list-reset">
+                            <li class="advantages__item">Надежные материалы</li>
+                            <li class="advantages__item">опытные монтажники</li>
+                            <li class="advantages__item">
+                                Регулируемая температура пола
+                            </li>
+                            <li class="advantages__item">
+                                Защита от замыканий
+                            </li>
+                            <li class="advantages__item">Гарантия до 10 лет</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
             <section class="section-offset calc" id="calc">
                 <div class="container calc__container">
                     <div class="calc__content gray-block">
                         <h2 class="title calc__title">Рассчитайте стоимость</h2>
-                        <form class="calc__form">
+                        <form class="calc__form js-calc-form">
                             <fieldset
                                 class="calc__fieldset calc__fieldset_size"
                             >
@@ -216,17 +253,23 @@
                     </div>
 
                     <div class="calc__total">
-                        <div class="calc__result-wrapper">
+                        <div
+                            class="calc__result-wrapper js-calc-result-wrapper"
+                        >
                             <p class="calc__result">
                                 <span class="calc__text">Площадь</span>
-                                <span class="calc__result-text">35 кв м</span>
+                                <span class="calc__result-text js-square"
+                                    >35 кв м</span
+                                >
                             </p>
 
                             <p class="calc__result">
                                 <span class="calc__text"
                                     >Примерная стоимость</span
                                 >
-                                <span class="calc__result-text">42590 руб</span>
+                                <span class="calc__result-text js-total-price"
+                                    >42590 руб</span
+                                >
                             </p>
                         </div>
                     </div>
